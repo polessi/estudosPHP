@@ -8,7 +8,8 @@ class ClientePessoaJuridica extends Cliente
 
     public function verInformacaoEmpresa() :string
     {
-        $dados = "Nome fantasia: {$this->nomeFantasia} <br> ";
+        $dados = "<h3>Dados da Pessoa Física</h3>";
+        $dados .= "Nome fantasia: {$this->nomeFantasia} <br> ";
         $dados .= "CNPJ: {$this->cnpj}";
 
         return "<p>$dados</p>";

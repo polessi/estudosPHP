@@ -8,6 +8,11 @@ class Cliente
 
     public function verEndereco() :string
     {
-        return "<p>Endereço: {$this->logradouro} </br> Bairro: {$this->bairro} <br> Número: {$this->numero}</p>";
+        return "
+                    <h3>Endereço Cliente</h3>
+                    <p>Endereço: {$this->logradouro} </br> 
+                    Bairro: {$this->bairro} <br> 
+                    Número: {$this->numero}</p>
+               ";
     }
 }

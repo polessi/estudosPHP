@@ -9,6 +9,9 @@
 <body>
     <?php 
         require './Cliente.php';
+        require './ClientePessoaFisica.php';
+        require './ClientePessoaJuridica.php';
+
         $cliente = new Cliente();
         $cliente->logradouro = "Avenida Teste - A";
         $cliente->bairro = "Bairro Teste - A";
@@ -18,12 +21,8 @@
 
         echo $msg;
         echo "<hr>";
-
-        require './ClientePessoaFisica.php';
+        
         $clientePf = new ClientePessoaFisica();
-        $clientePf->logradouro = "Avenida Teste - B";
-        $clientePf->bairro = "Bairro Teste - B";
-        $clientePf->numero = "02";
         $clientePf->nome = "Nome Teste";
         $clientePf->cpf = 11111111111;
 
@@ -32,7 +31,6 @@
         echo $msgPf;
         echo "<hr>";
 
-        require './ClientePessoaJuridica.php';
         $clientePj = new ClientePessoaJuridica();
         $clientePj->nomeFantasia = "Nome Empresa Teste";
         $clientePj->cnpj = 00000000000100;

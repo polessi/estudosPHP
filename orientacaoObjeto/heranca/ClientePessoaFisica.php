@@ -7,10 +7,8 @@ class ClientePessoaFisica extends Cliente
 
     public function verInformacaoUsuario() :string
     {
-        $dados = "Endereço da pessoa física <br>";
-        $dados .= "Endereço: {$this->logradouro}<br>";
-        $dados .= "Bairro: {$this->bairro} <br>";
-        $dados .= "Nome: {$this->bairro} <br>";
+        $dados = "<h3>Dados da Pessoa Física</h3>";
+        $dados .= "Nome: {$this->nome} <br>";
         $dados .= "CPF: {$this->cpf} ";
 
         return "<p>$dados</p>";
