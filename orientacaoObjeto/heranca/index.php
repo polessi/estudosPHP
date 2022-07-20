@@ -32,6 +32,16 @@
         echo $msgPf;
         echo "<hr>";
 
+        require './ClientePessoaJuridica.php';
+        $clientePj = new ClientePessoaJuridica();
+        $clientePj->nomeFantasia = "Nome Empresa Teste";
+        $clientePj->cnpj = 00000000000100;
+
+        $msgPj = $clientePj->verInformacaoEmpresa();
+
+        echo $msgPj;
+        echo "<hr>";
+
     ?>
 </body>
 </html>
