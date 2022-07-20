@@ -6,7 +6,7 @@ class Cliente
     public string $bairro;
     public int $numero;
 
-    public function verEndereco() :string
+    public function verEndereco(): string
     {
         return "
                     <h3>Endereço Cliente</h3>
