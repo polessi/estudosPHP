@@ -10,14 +10,28 @@
     <?php 
         require './Cliente.php';
         $cliente = new Cliente();
-        $cliente->logradouro = "Avenida Teste";
-        $cliente->bairro = "Bairro Teste";
+        $cliente->logradouro = "Avenida Teste - A";
+        $cliente->bairro = "Bairro Teste - A";
         $cliente->numero = "01";
 
         $msg = $cliente->verEndereco();
 
         echo $msg;
         echo "<hr>";
+
+        require './ClientePessoaFisica.php';
+        $clientePf = new ClientePessoaFisica();
+        $clientePf->logradouro = "Avenida Teste - B";
+        $clientePf->bairro = "Bairro Teste - B";
+        $clientePf->numero = "02";
+        $clientePf->nome = "Nome Teste";
+        $clientePf->cpf = 11111111111;
+
+        $msgPf = $clientePf->verInformacaoUsuario();
+
+        echo $msgPf;
+        echo "<hr>";
+
     ?>
 </body>
 </html>

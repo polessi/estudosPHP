@@ -1,0 +1,19 @@
+<?php
+
+class ClientePessoaFisica extends Cliente
+{
+    public string $nome;
+    public int $cpf;
+
+    public function verInformacaoUsuario() :string
+    {
+        $dados = "Endereço da pessoa física <br>";
+        $dados .= "Endereço: {$this->logradouro}<br>";
+        $dados .= "Bairro: {$this->bairro} <br>";
+        $dados .= "Nome: {$this->bairro} <br>";
+        $dados .= "CPF: {$this->cpf} ";
+
+        return "<p>$dados</p>";
+    }
+
+}
